@@ -2,6 +2,8 @@
   color: white;
 }
 
+/* login.html */
+
 body, h1 {
   margin: 0;
 }
@@ -56,12 +58,17 @@ button {
   color: #fff;
 }
 
+button:hover {
+  background: #970303;
+}
+
 input {
   background-color: transparent;
   color: black;
   border: none;
   border-bottom: 1px solid gray;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   margin: 1em;
   font-size: 20px;
   width: 50%;
@@ -107,3 +114,5 @@ screen and (max-width:1150px) {
     background: transparent;
   }
 }
+
+/* Home */
