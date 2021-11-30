@@ -128,7 +128,7 @@ screen and (max-width:1150px) {
 nav {
   width: 20vw;
   height: 100%;
-  background: linear-gradient(#ff8000 0%, #ff4600 100%, #808080 100%);
+  background: linear-gradient(#ff8000 0%, #ff4600 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -154,7 +154,6 @@ li i {
 }
 
 .button {
-  border: 1px solid #FFFFFF;
   border-radius: 1em;
   margin-left: 1em;
   text-align: center;
@@ -221,3 +220,5 @@ header {
 .add-project>i {
   padding: 1em 1em;
 }
+
+/*----- Home -----*/
