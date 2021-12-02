@@ -172,7 +172,7 @@ li i {
 
 ul {
   list-style-type: none;
-  font: normal normal normal 20px/27px Segoe UI;
+  font: normal 20px/27px Segoe UI;
   letter-spacing: 0.72px;
   color: #FFFFFF;
   height: 100%;
@@ -195,16 +195,17 @@ li:last-child {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   height: 100vh;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  height: 6vh;
+  font: normal 20px/27px Segoe UI;
   padding: 1em 2em;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid black;
 }
 
 .add-project {
@@ -221,4 +222,4 @@ header {
   padding: 1em 1em;
 }
 
-/*----- Home -----*/
+/*----- My team -----*/
