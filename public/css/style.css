@@ -28,8 +28,8 @@ body {
 }
 
 svg {
-  width: 770px;
-  height: 280px;
+  width: 33em;
+  height: 11em;
 }
 
 form {
@@ -147,6 +147,7 @@ a {
   text-decoration: none;
   display: inline-block;
   line-height: 2em;
+  text-align: right;
 }
 
 li i {
@@ -162,7 +163,6 @@ li i {
   color: #FFFFFF;
   padding: 0.2rem;
   width: 75%;
-  border-radius: 18px;
   background: radial-gradient(#ec4809 0%, #970303 100%);
 }
 
@@ -170,22 +170,26 @@ li i {
   background: #970303;
 }
 
+i.fa, i.fas, i.far {
+  width: 30px;
+}
+
 ul {
   list-style-type: none;
   font: normal 20px/27px Segoe UI;
-  letter-spacing: 1.72px;
+  letter-spacing: 0.72px;
   color: #FFFFFF;
   height: 100%;
-  width: calc(100% - 40px);
-  position: relative;
-  margin: 0 auto;
+  width: calc(100% - 15px);
+  margin: 0 0;
   padding: 0;
+  position: relative;
 }
 
 li {
-  text-align: left;
+  text-align: center;
   color: white;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 li:last-child {
@@ -201,6 +205,8 @@ main {
 
 header {
   display: flex;
+  flex-direction: column;
+  columns: 3;
   justify-content: space-between;
   height: 6vh;
   font: normal 20px/27px Segoe UI;
@@ -209,9 +215,9 @@ header {
 }
 
 .add-project {
-  background: #2E6CD3 0% 0% no-repeat padding-box;
+  background: #2d8d0b 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
-  border-radius: 1.5em;
+  border-radius: 3em;
   color: white;
   letter-spacing: 0.1em;
   text-align: center;
