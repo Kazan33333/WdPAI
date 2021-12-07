@@ -75,8 +75,8 @@ input {
 }
 
 
-@media only screen and (max-device-width:1150px),
-screen and (max-width:1150px) {
+@media only screen and (max-device-width:1200px),
+screen and (max-width:1200px) {
   body {
     flex-direction: column;
     background: transparent linear-gradient(#ff8000 0%, #ff4600 100%, #808080 100%);
@@ -84,11 +84,11 @@ screen and (max-width:1150px) {
 
   .login-form {
     flex-direction: column;
-    height: 60vh;
+    height: 72vh;
   }
 
   .logo {
-    height: 40vh;
+    height: 28vh;
   }
 
   form {
@@ -161,7 +161,7 @@ li i {
   letter-spacing: 0.72px;
   color: #FFFFFF;
   padding: 0.2rem;
-  width: 70%;
+  width: 75%;
   border-radius: 18px;
   background: radial-gradient(#ec4809 0%, #970303 100%);
 }
@@ -173,7 +173,7 @@ li i {
 ul {
   list-style-type: none;
   font: normal 20px/27px Segoe UI;
-  letter-spacing: 0.72px;
+  letter-spacing: 1.72px;
   color: #FFFFFF;
   height: 100%;
   width: calc(100% - 40px);
@@ -190,7 +190,7 @@ li {
 
 li:last-child {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   width: 100%;
 }
 
@@ -223,3 +223,4 @@ header {
 }
 
 /*----- My team -----*/
+
