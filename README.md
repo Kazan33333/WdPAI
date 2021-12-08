@@ -10,10 +10,7 @@ In this application you can build your own team consisting of LaLiga players (wi
 - JavaScript
 - Docker
 
-## An example screenshot of the prototype:
-```{r out.height = "450px", out.width='800px', echo=F}
-knitr::include_graphics("My_team.pdf")
-```
+## The initial prototype of the app is saved as 'Laligaf_prototype.pdf'.
 
 ## ERD of the database:
 ![erd](./ERD.svg)
