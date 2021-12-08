@@ -10,8 +10,8 @@ In this application you can build your own team consisting of LaLiga players (wi
 - JavaScript
 - Docker
 
-### An example screenshot of the prototype:
-xfun::embed_file("My_team.pdf")
+## An example screenshot of the prototype:
+![my_team](./My_team.png)
 
-### ERD of the database:
+## ERD of the database:
 ![erd](./ERD.svg)
