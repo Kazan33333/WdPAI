@@ -9,3 +9,6 @@ In this application you can build your own team consisting of LaLiga players (wi
 - SQL
 - JavaScript
 - Docker
+
+### ERD of the database:
+![image](./ERD.png)
