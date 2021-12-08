@@ -10,7 +10,7 @@ In this application you can build your own team consisting of LaLiga players (wi
 - JavaScript
 - Docker
 
-## The initial prototype of the app is saved as 'Laligaf_prototype.pdf'.
+### The initial prototype of the app is saved as 'Laligaf_prototype.pdf'.
 
-## ERD of the database:
+### ERD of the database:
 ![erd](./ERD.svg)
