@@ -11,7 +11,7 @@ In this application you can build your own team consisting of LaLiga players (wi
 - Docker
 
 ## An example screenshot of the prototype:
-![my_team](./My_team.png)
+![my_team](./My_team.png){width=65%}
 
 ## ERD of the database:
 ![erd](./ERD.svg)
