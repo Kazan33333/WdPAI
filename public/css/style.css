@@ -208,7 +208,7 @@ header {
   flex-direction: column;
   columns: 3;
   justify-content: space-between;
-  height: 6vh;
+  height: 7vh;
   font: normal 20px/27px Segoe UI;
   padding: 1em 2em;
   border-bottom: 1px solid black;
@@ -230,10 +230,19 @@ header {
 
 /*----- My team -----*/
 
+
+
 /*----- LaLiga table -----*/
+
+section {
+  background-image: url("../img/laliga_table_background.jpg");
+  
+  text-align: center;
+}
 
 table {
   text-align: center;
+  font: normal Segoe UI;
   width: 40vw;
   height: 80vh;
   background: transparent;
@@ -245,8 +254,8 @@ th {
 }
 
 table, th, td {
-  border: 1px solid white;
-  border-collapse: collapse ;
+  border: 0.5px solid white;
+  border-collapse: collapse;
 }
 
 th, td {
@@ -262,10 +271,14 @@ tr:nth-child(n+2) {
 }
 
 tr:nth-child(6) {
-  background: #ede203;
+  background: #9b0303;
 }
 
-tr:nth-child(n+7) {
+tr:nth-child(7) {
+  background: #f0e406;
+}
+
+tr:nth-child(n+9) {
   background: #fce4d6;
 }
 
