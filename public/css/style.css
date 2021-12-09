@@ -234,7 +234,7 @@ header {
 
 table {
   text-align: center;
-  width: 60vw;
+  width: 40vw;
   height: 80vh;
   background: transparent;
   opacity: 0.95;
@@ -275,8 +275,4 @@ tr:nth-child(2n+8) {
 
 tr:nth-child(n+19) {
   background: #f00;
-}
-
-tr:nth-child() {
-  
 }
