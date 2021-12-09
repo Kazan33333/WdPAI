@@ -126,7 +126,7 @@ screen and (max-width:1200px) {
 }
 
 nav {
-  width: 20vw;
+  width: 19vw;
   height: 100%;
   background: linear-gradient(#ff8000 0%, #ff4600 100%);
   display: flex;
@@ -135,7 +135,7 @@ nav {
 }
 
 main {
-  width: 80vw;
+  width: 81vw;
 }
 
 nav>img {
@@ -155,7 +155,7 @@ li i {
 }
 
 .button {
-  border-radius: 1em;
+  border-radius: 0.8em;
   margin-left: 1em;
   text-align: center;
   border: none;
@@ -194,7 +194,7 @@ li {
 
 li:last-child {
   position: absolute;
-  bottom: 5px;
+  bottom: 0;
   width: 100%;
 }
 
@@ -230,3 +230,53 @@ header {
 
 /*----- My team -----*/
 
+/*----- LaLiga table -----*/
+
+table {
+  text-align: center;
+  width: 60vw;
+  height: 80vh;
+  background: transparent;
+  opacity: 0.95;
+}
+
+th {
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse ;
+}
+
+th, td {
+  padding: 5px;
+}
+
+tr:nth-child(1) {
+  background: #ff6019;
+}
+
+tr:nth-child(n+2) {
+  background: #3175fd;
+}
+
+tr:nth-child(6) {
+  background: #ede203;
+}
+
+tr:nth-child(n+7) {
+  background: #fce4d6;
+}
+
+tr:nth-child(2n+8) {
+  background: #f8cbad;
+}
+
+tr:nth-child(n+19) {
+  background: #f00;
+}
+
+tr:nth-child() {
+  
+}
