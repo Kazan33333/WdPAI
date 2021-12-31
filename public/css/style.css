@@ -289,3 +289,10 @@ tr:nth-child(2n+8) {
 tr:nth-child(n+19) {
   background: #f00;
 }
+
+/*----- Friends -----*/
+
+sectionfr {
+  background: #f8e4d0;;
+  height: 100vh;
+}
