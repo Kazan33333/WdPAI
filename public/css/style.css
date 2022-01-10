@@ -234,17 +234,19 @@ header {
 
 /*----- LaLiga table -----*/
 
-section {
+sectiontab {
   background-image: url("../img/laliga_table_background.jpg");
-  
+  max-width: 100vw;
+  height: 100vh;
   text-align: center;
 }
 
 table {
   text-align: center;
+  margin: auto;
   font: normal Segoe UI;
   width: 40vw;
-  height: 80vh;
+  height: 100vh;
   background: transparent;
   opacity: 0.95;
 }
