@@ -1,164 +1,315 @@
 * {
-    color: blueviolet;
+  color: white;
 }
 
+/*----- login.php -----*/
+
 body, h1 {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .logo {
-    background-color: orange;
-}
-
-.login-form {
-    background-color: lightsalmon;
-
+  width: 1920px;
+  height: 1080px;
 }
 
 .logo, .login-form {
-    height: 100vh;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: transparent linear-gradient(#ff8000 0%, #ff4600 100%, #808080 100%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 100%;
+  height: 50%;
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-}
-
-@media screen and (max-device-width:411px),
-screen and (max-width:411px) {
-    body {
-        flex-direction: column;
-    }
-
-    .logo {
-        height: 20vh;
-    }
-
-    .login-form {
-        height: 80vh;
-    }
-}
-
-/* CSS */
-.button-78 {
-  background-color: var(--main-bin-color);
-  align-items: center;
-  appearance: none;
-  background-clip: padding-box;
-  background-color: initial;
-  background-image: none;
-  border-style: none;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  flex-direction: row;
-  flex-shrink: 0;
-  font-family: Eina01,sans-serif;
-  font-size: 16px;
-  font-weight: 800;
+  display: flex;
   justify-content: center;
-  line-height: 24px;
-  margin: 0;
-  min-height: 64px;
-  outline: none;
-  overflow: visible;
-  padding: 19px 26px;
-  pointer-events: auto;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: auto;
-  word-break: keep-all;
-  z-index: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  width: 742px;
+  height: 485px;
+  border-radius: 70px;
+  background: #f8e4d0;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.16);
 }
 
-@media (min-width: 768px) {
-  .button-78 {
-    padding: 19px 32px;
+.message {
+  color: red;
+}
+
+button {
+  width: 207px;
+  height: 68px;
+  border-radius: 18px;
+  border: none;
+  background: radial-gradient(#ec4809 0%, #970303 100%);
+  font-family: "Segoe UI";
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+}
+
+button:hover {
+  background: #970303;
+}
+
+.button-78:hover {
+  background: #970303;
+}
+
+input {
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin: 1em;
+  font-size: 20px;
+  width: 50%;
+}
+
+
+@media only screen and (max-device-width:1200px),
+screen and (max-width:1200px) {
+  body {
+    flex-direction: column;
+    background: transparent linear-gradient(#ff8000 0%, #ff4600 100%, #808080 100%);
+  }
+
+  .login-form {
+    flex-direction: column;
+    height: 72vh;
+  }
+
+  .logo {
+    height: 28vh;
+  }
+
+  form {
+    width: 85vw;
+    height: 1100px;
+    border-radius: 200px;
+  }
+
+  input {
+    font-size: 42px;
+    width: 75%;
+  }
+
+  button {
+    font-size: 48px;
+    width: 450px;
+    height: 180px;
+    border-radius: 50px;
+  }
+
+  .logo, .login-form {
+    width: 100%;
+    background: transparent;
   }
 }
 
-.button-78:before,
-.button-78:after {
-  border-radius: 80px;
-}
+/*----- Home -----*/
 
-.button-78:before {
-  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
-  content: "";
-  display: block;
+.base-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
   width: 100%;
-  z-index: -2;
+  background: #366725;
 }
 
-.button-78:after {
-  background-color: initial;
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
-  bottom: 4px;
-  content: "";
-  display: block;
-  left: 4px;
-  overflow: hidden;
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+  padding: 2em;
+  overflow: auto;
+  text-align: center;
+}
+
+nav {
+  width: 20%;
+  height: 100vh;
+  background: linear-gradient(#ff8000 0%, #ff4600 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+main {
+  width: 80vw;
+  height: 80vh;
+}
+
+nav>img {
+  width: 60%;
+  margin: 2em auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 2em;
+  text-align: right;
+}
+
+li i {
+  font-size: 1.5em;
+}
+
+.button {
+  border-radius: 0.8em;
+  margin-left: 1em;
+  text-align: center;
+  border: none;
+  letter-spacing: 0.72px;
+  color: #FFFFFF;
+  padding: 0.2rem;
+  width: 75%;
+  background: radial-gradient(#ec4809 0%, #970303 100%);
+}
+
+.button:hover {
+  background: #970303;
+}
+
+i.fa, i.fas, i.far {
+  width: 30px;
+}
+
+ul {
+  list-style-type: none;
+  font: normal 20px/27px Segoe UI;
+  letter-spacing: 0.72px;
+  color: #FFFFFF;
+  height: 100%;
+  width: calc(100% - 15px);
+  margin: 0 0;
+  padding: 0;
+  position: relative;
+}
+
+li {
+  text-align: center;
+  color: white;
+  margin-bottom: 2em;
+}
+
+li:last-child {
   position: absolute;
-  right: 4px;
-  top: 4px;
-  transition: all 100ms ease-out;
-  z-index: -1;
-}
-
-.button-78:hover:not(:disabled):before {
-  background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
-}
-
-.button-78:hover:not(:disabled):after {
   bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition-timing-function: ease-in;
-  opacity: 0;
+  width: 100%;
 }
 
-.button-78:active:not(:disabled) {
-  color: #ccc;
+main {
+  display: grid;
+  height: 100vh;
 }
 
-.button-78:active:not(:disabled):before {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20%;
+  font: normal 20px/27px Segoe UI;
+  padding: 1em 2em;
+  border-bottom: 1px solid black;
 }
 
-.button-78:active:not(:disabled):after {
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
-  bottom: 4px;
-  left: 4px;
-  right: 4px;
-  top: 4px;
+.add-project {
+  background: #2d8d0b 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 3em;
+  color: white;
+  letter-spacing: 0.1em;
+  text-align: center;
+  width: 20%;
 }
 
-.button-78:disabled {
-  cursor: default;
-  opacity: .24;
+.add-project>i {
+  padding: 1em 1em;
 }
+
+/*----- My team -----*/
+
+
+
+/*----- LaLiga table -----*/
+
+sectiontab {
+  background-image: url("/public/img/laliga_table_background.jpg");
+  max-width: 100vw;
+  max-height: 100vh;
+  text-align: center;
+}
+
+table {
+  text-align: center;
+  margin: auto;
+  font: normal 20px/27px Segoe UI;
+  width: 40vw;
+  height: 89.3vh;
+  background: transparent;
+  opacity: 0.95;
+}
+
+th {
+  text-align: center;
+}
+
+table, th, td {
+  border: 0.5px solid white;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+}
+
+tr:nth-child(1) {
+  background: #ff6019;
+}
+
+tr:nth-child(n+2) {
+  background: #3175fd;
+}
+
+tr:nth-child(6) {
+  background: #9b0303;
+}
+
+tr:nth-child(7) {
+  background: #f0e406;
+}
+
+tr:nth-child(n+9) {
+  background: #fce4d6;
+}
+
+tr:nth-child(2n+8) {
+  background: #f8cbad;
+}
+
+tr:nth-child(n+19) {
+  background: #f00;
+}
+
+/*----- Friends -----*/
+
+/*----- Account -----*/

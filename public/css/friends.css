@@ -1,0 +1,21 @@
+section {
+    display: flex;
+    flex-direction: column;
+    background: #f8e4d0;
+    overflow: auto;
+    position: relative;
+    height: 192% !important;
+    top: -92%;
+    width: 100%;
+    padding: 0;
+}
+
+.myfriends>div>img {
+    object-fit: cover;
+}
+
+.myfriends>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
