@@ -30,6 +30,7 @@
                     <i class="fas fa-user-friends"></i>
                     <a href="/friends" class="button">Friends</a>
                 </li>
+                <?php include 'admin_stuff.php'; ?>
                 <li>
                     <i class="fas fa-cog"></i>
                     <a href="/settings" class="button">Settings</a>

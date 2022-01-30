@@ -5,7 +5,8 @@ require_once 'AppController.php';
 require_once 'src/models/User.php';
 require_once 'src/repository/UserRepository.php';
 
-class SecurityController extends AppController {
+class SecurityController extends AppController
+{
 
     private $cookieName;
     private UserRepository $userRepository;
@@ -18,8 +19,9 @@ class SecurityController extends AppController {
     }
 
 
-    public function login() {
-        if(!$this->isPost()) {
+    public function login()
+    {
+        if (!$this->isPost()) {
             return $this->render('login');
         }
 
@@ -28,13 +30,13 @@ class SecurityController extends AppController {
 
         $user = $this->userRepository->getUser($email);
 
-        if(!$user) {
+        if (!$user) {
             return $this->render('login', ['messages' => ['User does not exist']]);
         }
-        if($user->getEmail() !== $email) {
+        if ($user->getEmail() !== $email) {
             return $this->render('login', ['messages' => ['User with this email does not exist']]);
         }
-        if(!password_verify($password, $user->getPassword())) {
+        if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong email or password']]);
         }
         $cookieNameValue = $user->getEmail();
@@ -44,7 +46,7 @@ class SecurityController extends AppController {
         $cookieRoleValue = $user->getRole();
 
 
-        if(!isset($_COOKIE[$this->cookieName])){
+        if (!isset($_COOKIE[$this->cookieName])) {
             setCookie($this->cookieName, $cookieNameValue, time() + (86400 * 30), "/");
             setCookie('imageurl', $cookieImageValue, time() + (86400 * 30), "/");
             setCookie('name', $cookieUsernameValue, time() + (86400 * 30), "/");
@@ -56,8 +58,9 @@ class SecurityController extends AppController {
         header("Location: {$url}/home");
     }
 
-    public function register() {
-        if(!$this->isPost()) {
+    public function register()
+    {
+        if (!$this->isPost()) {
             return $this->render('register');
         }
 
@@ -68,15 +71,20 @@ class SecurityController extends AppController {
             $_POST['surname']
         );
 
-        $message =  $this->userRepository->saveUser($user);
+        $message = $this->userRepository->saveUser($user);
 
         return $this->render('register', ['messages' => [$message]]);
 
     }
 
-    public function logout(){
+    public function logout()
+    {
         if (isset($_COOKIE['user'])) {
             setcookie('user', '', time() - (86400 * 30), "/");
+            setcookie('imageurl', '', time() - (86400 * 30), "/");
+            setcookie('name', '', time() - (86400 * 30), "/");
+            setcookie('surname', '', time() - (86400 * 30), "/");
+            setcookie('role', '', time() - (86400 * 30), "/");
             $url = "http://$_SERVER[HTTP_HOST]";
             header("Location: {$url}/");
         }

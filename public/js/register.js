@@ -12,10 +12,10 @@ function arePasswordsSame(password, confirmPassword) {
 }
 
 function markValidation(element, condition) {
-    !condition ? non_valid(element) : valid(element);
+    !condition ? no_valid(element) : valid(element);
 }
 
-function non_valid(element) {
+function no_valid(element) {
     element.classList.add('no-valid');
     button.disabled = true;
 }
