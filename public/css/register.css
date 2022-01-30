@@ -17,3 +17,26 @@ form {
     box-shadow: 0 0 0.2em red;
     outline: none;
 }
+
+@media only screen and (max-device-width:1200px),
+screen and (max-width:1200px) {
+    body {
+        flex-direction: column;
+        background: transparent linear-gradient(#ff8000 0%, #ff4600 100%, #808080 100%);
+    }
+
+    .login-form {
+        flex-direction: column;
+        height: 72vh;
+    }
+
+    .logo {
+        height: 28vh;
+    }
+
+    form {
+        width: 85vw;
+        height: 1500px;
+        border-radius: 200px;
+    }
+}
