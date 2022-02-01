@@ -1,33 +1,3 @@
-create table club
-(
-    id_club serial
-        constraint club_pk
-            primary key,
-    name    varchar(255) not null
-);
-
-alter table club
-    owner to fdsplyjnpcbvfr;
-
-create unique index club_id_club_uindex
-    on club (id_club);
-
-create table logs
-(
-    id_logs  integer      not null
-        constraint logs_pkey
-            primary key,
-    name     varchar(255) not null,
-    surname  varchar(255) not null,
-    browser  varchar(255),
-    datetime date         not null,
-    host     varchar(255),
-    device   varchar(255)
-);
-
-alter table logs
-    owner to fdsplyjnpcbvfr;
-
 create table player
 (
     id_player      serial
@@ -41,7 +11,21 @@ create table player
 );
 
 alter table player
-    owner to fdsplyjnpcbvfr;
+    owner to pdunuiyfzqoodk;
+
+create table club
+(
+    id_club serial
+        constraint club_pk
+            primary key,
+    name    varchar(255) not null
+);
+
+alter table club
+    owner to pdunuiyfzqoodk;
+
+create unique index club_id_club_uindex
+    on club (id_club);
 
 create table player_club
 (
@@ -57,21 +41,10 @@ create table player_club
 );
 
 alter table player_club
-    owner to fdsplyjnpcbvfr;
+    owner to pdunuiyfzqoodk;
 
 create unique index player_club_id_player_club_uindex
     on player_club (id_player_club);
-
-create table role
-(
-    id_role   serial
-        constraint role_pk
-            primary key,
-    role_name varchar not null
-);
-
-alter table role
-    owner to fdsplyjnpcbvfr;
 
 create table team
 (
@@ -83,7 +56,7 @@ create table team
 );
 
 alter table team
-    owner to fdsplyjnpcbvfr;
+    owner to pdunuiyfzqoodk;
 
 create table player_team
 (
@@ -99,10 +72,63 @@ create table player_team
 );
 
 alter table player_team
-    owner to fdsplyjnpcbvfr;
+    owner to pdunuiyfzqoodk;
 
 create unique index player_team_id_player_team_uindex
     on player_team (id_player_team);
+
+create table "user"
+(
+    id_user        serial
+        constraint user_pk
+            primary key,
+    login          varchar(255)      not null,
+    password       varchar(255)      not null,
+    email          varchar(255)      not null,
+    name           varchar(255)      not null,
+    surname        varchar(255)      not null,
+    points         integer default 0 not null,
+    points_overall integer default 0 not null,
+    image_url      varchar(255)      not null
+);
+
+alter table "user"
+    owner to pdunuiyfzqoodk;
+
+create unique index user_login_uindex
+    on "user" (login);
+
+create table team_user
+(
+    id_team_user serial
+        constraint team_user_pkey
+            primary key,
+    id_user      integer not null
+        constraint team_user_fk_1
+            references "user",
+    id_team      integer not null
+        constraint team_user_fk_2
+            references team
+);
+
+alter table team_user
+    owner to pdunuiyfzqoodk;
+
+create table logs
+(
+    id_logs  integer      not null
+        constraint logs_pkey
+            primary key,
+    name     varchar(255) not null,
+    surname  varchar(255) not null,
+    browser  varchar(255),
+    datetime date         not null,
+    host     varchar(255),
+    device   varchar(255)
+);
+
+alter table logs
+    owner to pdunuiyfzqoodk;
 
 create table user_friendship
 (
@@ -113,54 +139,4 @@ create table user_friendship
 );
 
 alter table user_friendship
-    owner to fdsplyjnpcbvfr;
-
-create table users
-(
-    id_user        integer default nextval('user_id_user_seq'::regclass) not null
-        constraint user_pk
-            primary key,
-    password       varchar(255)                                          not null,
-    email          varchar(255)                                          not null,
-    name           varchar(255)                                          not null,
-    surname        varchar(255)                                          not null,
-    points         integer default 0                                     not null,
-    points_overall integer default 0                                     not null,
-    image_url      varchar(255)                                          not null
-);
-
-alter table users
-    owner to fdsplyjnpcbvfr;
-
-create table team_user
-(
-    id_team_user serial
-        constraint team_user_pkey
-            primary key,
-    id_user      integer not null
-        constraint team_user_fk_1
-            references users,
-    id_team      integer not null
-        constraint team_user_fk_2
-            references team
-);
-
-alter table team_user
-    owner to fdsplyjnpcbvfr;
-
-create table user_roles
-(
-    id_user integer not null
-        constraint user_roles_id_users_fk
-            references users
-            on update cascade on delete cascade,
-    id_role integer not null
-        constraint user_roles_id_role_fk
-            references role
-            on update cascade on delete cascade,
-    constraint user_roles_pk
-        primary key (id_user, id_role)
-);
-
-alter table user_roles
-    owner to fdsplyjnpcbvfr;
+    owner to pdunuiyfzqoodk;

@@ -1,0 +1,12 @@
+header {
+    height: 20%;
+    border-bottom: 0;
+}
+
+section {
+    /*background: url("/public/img/laliga_table_background.jpg");*/
+    max-width: 100vw;
+    max-height: 100vh;
+    text-align: center;
+    position:center;
+}

@@ -48,7 +48,7 @@
                     <!-- username -->
                 </div>
             </header>
-            <sectiontab>
+            <section>
                 <table>
                     <tr>
                         <th>#</th>
@@ -303,7 +303,7 @@
                         <td><!-- goal difference --></td>
                     </tr>
                 </table>
-            </sectiontab>
+            </section>
         </main>
     </div>
 </body>

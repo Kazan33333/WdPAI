@@ -6,6 +6,9 @@ section {
 }
 
 form {
+    position: absolute;
+    top: 19%;
+    left: 40%;
     display: flex;
     justify-content: center;
     flex-direction: column;
