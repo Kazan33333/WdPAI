@@ -1,7 +1,242 @@
-section {
+.base-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    background: #366725;
+  }
+  
+  nav {
+    width: 20vw;
+    height: 100vh;
+    background: linear-gradient(#ff8000 0%, #ff4600 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  nav>img {
+    width: 60%;
+    margin: 2em auto;
+  }
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2em;
+    text-align: right;
+  }
+  
+  li i {
+    font-size: 1.5em;
+  }
+  
+  .button {
+    border-radius: 0.8em;
+    margin-left: 1em;
+    text-align: center;
+    border: none;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+    padding: 0.2rem;
+    width: 75%;
+    background: radial-gradient(#ec4809 0%, #970303 100%);
+  }
+  
+  .button:hover {
+    background: #970303;
+  }
+  
+  i.fa, i.fas, i.far {
+    width: 30px;
+  }
+  
+  ul {
+    list-style-type: none;
+    font: normal 20px/27px Segoe UI;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+    height: 100%;
+    width: calc(100% - 15px);
+    margin: 0 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  li {
+    text-align: center;
+    color: white;
+    margin-bottom: 2em;
+  }
+  
+  li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  main {
+    height: 100vh;
+    width: 80vw;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+    font: normal 20px/27px Segoe UI;
+    /* padding: 1em 2em; */
+    border-bottom: 1px solid black;
+  }
+  
+  .add-project {
+    background: #2d8d0b 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 3em;
+    color: white;
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: 20%;
+  }
+  
+  .add-project>i {
+    padding: 1em 1em;
+  }
+.scoreboxes-left, .scoreboxes-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+/* .scoreboxes-left {
+
+} */
+.scoreboxes-right span {
+    margin-right: 20px;
+}
+.scorebox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    border-right: 1px solid black;
+}
+.scorebox span {
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    white-space: nowrap;
+    margin: 0 20px;
+}
+.box-number {
+    background-color: orange;
+    height: 30px;
+    padding: 0 30px;
+    border-radius: 5px;
+    margin-left: 0;
+}
+.box-number-small {
+    background-color: orange;
+    height: 30px;
+    border-radius: 5px;
+    padding: 6px;
+    margin: 0 5px;
+}
+.projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
     grid-gap: 2em;
     padding: 2em;
     overflow: auto;
+    text-align: center;
+}
+.project-box {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: rgb(97, 156, 9);
+    border-radius: 20px;
+}
+.project-box-image {
+    width: 160px;
+    height: 100%;
+    background-color: orangered;
+}
+.project-box-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-left: 20px;
+}
+.box > h2 {
+    margin-top: 0;
+}
+.project-box-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: rgb(97, 156, 9);
+    border-radius: 20px;
+}
+.project-box-2 > .project-box-info  {
+    height: auto;
+}
+.project-box-images {
+    width: 80%;
+    height: 40%;
+    background-color: orangered;
+}
+.button-red {
+    background-color: #970303;
+}
+.best-players {
+    height: 50vh;
+    background-color: rgb(97, 156, 9);
+    margin: 0 60px;
+    border-radius: 20px;
+    padding: 12px;
+}
+.best-players-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.best-players-header > .back {
+    display: flex;
+}
+.best-players-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2em;
+    overflow: auto;
+    text-align: center;
+}
+.best-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(99, 56, 56);
+    padding: 20px;
+    border-right: 1px solid #970303;
+}
+.best-player:nth-child(3) {
+    border-right: none;
+}
+.best-player-image {
+    height: 200px;
+    width: 200px;
+    background-color: #970303;
+    border-radius: 20px;
+}
+.best-player-info {
+    width: 100%;
+    
 }

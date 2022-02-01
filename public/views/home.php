@@ -39,26 +39,83 @@
         </nav>
         <main>
             <header>
-                <div class="scorebox">
-                <div>Overall points:
-
+                <div class="scoreboxes-left">
+                    <div class="scorebox">
+                        <span>Overall points:</span> 
+                        <span class="box-number">271</span> 
+                    </div>
+                    <div class="scorebox">
+                        <span>Last Weekday:</span> 
+                        <span class="box-number">43</span> 
+                    </div>
                 </div>
-                <div>Last weekday:</div>
-                    <i class="fas fa-user-circle"></i>
+                <div class="scoreboxes-right">
                     <!-- username -->
+                    <span>John Doe</span> 
+                    <span><i class="fas fa-user-circle"></i></span>
                 </div>
             </header>
             <section class="projects">
-                <div id="project-1">
-                    <div>
-                        <h2>Weekday X best player</h2>
-                        <p>NAME</p>
-                        <div class="social-section">
+                <div class="project-box">
+                    <div class="project-box-image">
+                        <!-- do dodania zdjecie + usuniecie tła -->
+                    </div>
+                    <div class="project-box-info">
+                        <div class="box">
+                            <h2>Weekday X best player</h2>
+                            <p>NAME</p>
+                            <div><span class="box-number-small">22</span>points</div>
                         </div>
                     </div>
                 </div>
-                <div>Compete with your
-                    
+                <div class="project-box-2">
+                    <div class="project-box-images">
+                        <!-- do dodania zdjecie + usuniecie tła -->
+                    </div>
+                    <div class="project-box-info">
+                        <div class="box">
+                            <p>Compete with your</p>
+                            <div class="button-red">Friends</div>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+            <section class="best-players">
+                <div class="best-players-header">
+                    <span>My weekday 12 best players</span>
+                    <div class="back">
+                        <span>Go to</span>
+                        <div class="button-red">My team</div>
+                    </div>
+                </div>
+                <div class="best-players-list">
+                    <div class="best-player">
+                        <div class="best-player-image">
+                            <!-- do dodania zdjecie + usuniecie tła -->
+                        </div>
+                        <div class="best-player-info">
+                            <p>Benzema</p>
+                            <div><span class="box-number-small">22</span>points</div>
+                        </div>
+                    </div>
+                    <div class="best-player">
+                        <div class="best-player-image">
+                            <!-- do dodania zdjecie + usuniecie tła -->
+                        </div>
+                        <div class="best-player-info">
+                            <p>Benzema</p>
+                            <div><span class="box-number-small">22</span>points</div>
+                        </div>
+                    </div>
+                    <div class="best-player">
+                        <div class="best-player-image">
+                            <!-- do dodania zdjecie + usuniecie tła -->
+                        </div>
+                        <div class="best-player-info">
+                            <p>Benzema</p>
+                            <div><span class="box-number-small">22</span>points</div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
