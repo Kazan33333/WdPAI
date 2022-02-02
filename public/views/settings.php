@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div class="base-container">
+<div class="container">
     <nav>
         <svg xmlns="http://www.w3.org/2000/svg" width="319" height="235" viewBox="0 0 319 235" preserveAspectRatio="none">
             <text id="LALIGAF" fill="#fff" font-size="61" font-family="ArialNarrow-BoldItalic, Arial" font-weight="700"
